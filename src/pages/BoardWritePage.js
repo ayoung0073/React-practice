@@ -33,7 +33,7 @@ function BoardWritePage(props) {
 
         let body = {
             title: Title,
-            content: Content
+            content: desc
         }
         console.log(body)
 
@@ -59,7 +59,8 @@ function BoardWritePage(props) {
                 </div>
 
                 <div>
-                    <Editor value={Content} onChange={onContentHandler} />
+                    <Editor value={desc} onChange={onEditorChange} />
+                    {/* <Editor value={Content} onChange={onContentHandler} /> */}
                 </div>
             <button class="btn btn-dark">save</button>
             </form>
