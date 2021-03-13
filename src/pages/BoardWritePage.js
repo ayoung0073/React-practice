@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import Nav from '../components/nav'
 import Editor from '../components/EditorComponent'
-import {withRouter} from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
-import {postBoard} from '../_actions/board_action'
+import { postBoard } from '../_actions/board_action'
 
 
 function BoardWritePage(props) {

@@ -13,23 +13,13 @@ export function postBoard(dataTosubmit){
     }
 }
 
-// export function registerUser(dataTosubmit){
-//     const request = axios.post('/api/register', dataTosubmit)
-//         .then(response => response.data)
-    
-//     return {
-//         type: REGISTER_USER,
-//         payload: request
-//     }
-// }
+export function getBoardList(){
 
-// export function auth(){
-
-//     const request = axios.get('/api/auth')
-//         .then(response => response.data)
+    const request = axios.get('/api/board')
+        .then(response => response.data)
     
-//     return {
-//         type: AUTH_USER,
-//         payload: request
-//     }
-// }
+    return {
+        type: "get_board", // 없으면 ..?
+        payload: request
+    }
+}
