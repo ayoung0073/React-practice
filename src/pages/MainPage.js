@@ -27,15 +27,17 @@ function MainPage(props) {
         <div>
             <Nav />
             <div class="container">
-                <a href="/write">글 쓰기</a>
-                <h3>글 목록</h3>
-                <table border="1">
-                    <tr>
-                        <th>NO.</th>
-                        <th>제목</th>
-                    </tr>
-                    {Boards.map(board => <tr><td>{board.seq}</td><td>{board.title}</td></tr>)}
-                </table>
+                <a href="/write" class="btn btn-secondary">글 쓰기</a>
+                <br/><br/>
+                {Boards.map(board => 
+                <div class="card m-1">
+                    <div class="card-body">
+                        <h5 class="card-title">{board.title}</h5>
+                        <a href="/board/{board.bno}" class="btn btn-dark">상세 보기</a>
+                    </div>
+                </div>
+                )}
+
             </div>
         </div>
     );
