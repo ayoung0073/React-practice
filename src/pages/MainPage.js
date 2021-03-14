@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Nav from '../components/nav'
 import { withRouter } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
@@ -17,11 +17,13 @@ function MainPage(props) {
 
     // },[]);
 
+    useEffect(() => {
     dispatch(getBoardList())
     .then(response => {
         setBoards(response.payload)
         console.log(Boards)
     })
+    }, []);
 
     return (
         <div>
