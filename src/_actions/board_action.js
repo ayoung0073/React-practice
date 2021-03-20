@@ -19,6 +19,19 @@ export function getBoardList(){
         .then(response => response.data)
     
     return {
+        type: "get_board_list", // 없으면 ..?
+        payload: request
+    }
+}
+
+export function getBoard(n){
+    console.log(n);
+    const request = axios.get('/api/board/' + n)
+        .then(response => response.data)
+
+    console.log(request);
+    
+    return {
         type: "get_board", // 없으면 ..?
         payload: request
     }

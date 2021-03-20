@@ -3,6 +3,7 @@ import Nav from '../components/nav'
 import { withRouter } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { getBoardList } from '../_actions/board_action'
+import { Link } from 'react-router-dom';
 
 function MainPage(props) {
 
@@ -34,8 +35,18 @@ function MainPage(props) {
                 {Boards.map(board => 
                 <div class="card m-1">
                     <div class="card-body">
+                        {board.bno}
                         <h5 class="card-title">{board.title}</h5>
-                        <a href="/board/{board.bno}" class="btn btn-dark">상세 보기</a>
+                        {/* <a href="/board" class="btn btn-dark">상세 보기</a> */}
+                        
+                        <Link to={{
+                            pathname : `/board/${board.bno}`,
+                            state : {
+                                bno : 3
+                            }
+                        }}>
+                            상세 보기   
+                        </Link>
                     </div>
                 </div>
                 )}

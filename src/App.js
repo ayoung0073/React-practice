@@ -9,6 +9,7 @@ import {
 
 import MainPage from './pages/MainPage'
 import BoardWritePage from './pages/BoardWritePage'
+import BoardDetailPage from './pages/BoardDetailPage'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={MainPage}/>
         <Route exact path="/write" component={BoardWritePage}/>
+        <Route exact path="/board/:bno" component={BoardDetailPage}/>
       </Switch>
     </div>
   </Router>
