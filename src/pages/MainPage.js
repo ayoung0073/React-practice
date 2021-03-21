@@ -42,9 +42,9 @@ function MainPage(props) {
                         <Link to={{
                             pathname : `/board/${board.bno}`,
                             state : {
-                                bno : 3
+                                bno : board.bno
                             }
-                        }}>
+                        }} class="btn btn-dark">
                             상세 보기   
                         </Link>
                     </div>

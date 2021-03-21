@@ -18,10 +18,10 @@ const Nav = () => {
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="/login">login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#">join</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Link</a>

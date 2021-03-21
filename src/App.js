@@ -10,6 +10,7 @@ import {
 import MainPage from './pages/MainPage'
 import BoardWritePage from './pages/BoardWritePage'
 import BoardDetailPage from './pages/BoardDetailPage'
+import LoginPage from './pages/LoginPage';
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
         <Route exact path="/" component={MainPage}/>
         <Route exact path="/write" component={BoardWritePage}/>
         <Route exact path="/board/:bno" component={BoardDetailPage}/>
+
+        <Route exact path="/login" component={LoginPage}/>
       </Switch>
     </div>
   </Router>
